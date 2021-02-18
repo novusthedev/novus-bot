@@ -1,3 +1,5 @@
+// DO NOT MODIFY OR THE BOT MIGHT BREAK //
+
 const Discord = require('discord.js');
 const  fs = require('fs');
 

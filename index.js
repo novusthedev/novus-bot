@@ -1,3 +1,5 @@
+// DO NOT MODIFY OR THE BOT MIGHT BREAK //
+
 const Discord = require("discord.js");
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 const command_handler = require("./commands");
@@ -5,14 +7,18 @@ const {
     prefix,
     token
 } = require('./conf/config.json');
+const {
+    version
+} = require('./package.json');
 
 const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Novus Bot Status: Online');
+    console.log(`Version: ${version}`);
     command_handler.initCommands(client);
-    client.user.setActivity('on 2.0.0A2B', { type: 'WATCHING' })
-  .then(presence => console.log(`Novus Bot Version ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
+    client.user.setActivity(`${prefix}help (${version})`, { type: 'WATCHING' })
+  .then(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
   .catch(console.error);
 });
 
