@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 const command_handler = require("./commands");
 const {
     prefix,
@@ -10,7 +11,7 @@ const client = new Discord.Client();
 client.once('ready', () => {
     console.log('Novus Bot Status: Online');
     command_handler.initCommands(client);
-    client.user.setActivity('on 2.0.0A', { type: 'WATCHING' })
+    client.user.setActivity('on 2.0.0A2B', { type: 'WATCHING' })
   .then(presence => console.log(`Novus Bot Version ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
   .catch(console.error);
 });
