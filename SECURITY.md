@@ -3,6 +3,7 @@
 ## Supported Versions
 
 Non LTS will be supported for 5 months if the next stable version is released
+
 LTS will be supported for a year
 
 | Version | Supported          | LTS?               |
