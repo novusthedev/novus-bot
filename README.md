@@ -1,6 +1,9 @@
 # Novus's Bot
 source code for Novus's Bot on discord
 
+Invite (Coming soon)
+<p><a title="Invite (Unstable Version)" href="https://discord.com/api/oauth2/authorize?client_id=811696283756134411&amp;permissions=8&amp;scope=bot" target="_blank" rel="noopener">Invite</a></p>
+
 <h2><strong>What is this for?</strong></h2>
 <p>This bot was made in Bot designer for discord but the app is very limited and it requires an ad to bring it online. So i decided to redo the bot in discord.js. since im nice, im giving everyone the source code.<br /></p>
 
