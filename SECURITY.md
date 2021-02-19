@@ -7,8 +7,7 @@ LTS will be supported for a year
 
 | Version | Supported          | LTS?               |
 | ------- | ------------------ | ------------------ |
-| 2.0.0A2B| :white_check_mark: | Pre-release        |
-| 2.0.0A  | :x:                | Pre-release        |
+| ???     | ???                | ???                |
 
 ## Reporting a Vulnerability
 
