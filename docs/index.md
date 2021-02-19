@@ -1,5 +1,10 @@
 <h1>Novus's Bot</h1>
 <p>Welcome to Novus's Bot's official site. Hosted on github pretty much forever.</p>
+<ul class="downloads">
+          <li><a href="https://github.com/pages-themes/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pages-themes/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pages-themes/minimal">View On <strong>GitHub</strong></a></li>
+        </ul>
 
 <p><a title="Invite" href="https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847" target="_blank" rel="noopener">Invite</a></p>
 <p><a title="Invite (Unstable Version)" href="https://discord.com/api/oauth2/authorize?client_id=811696283756134411&amp;permissions=8&amp;scope=bot" target="_blank" rel="noopener">Invite (Unstable Version)</a></p>
