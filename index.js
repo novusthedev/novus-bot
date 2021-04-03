@@ -18,7 +18,7 @@ client.once('ready', () => {
     console.log('Novus Bot Status: Online');
     console.log(`Version: ${version}`);
     command_handler.initCommands(client);
-    client.user.setActivity(`${prefix}help (${version})`, { type: 'WATCHING' })
+    client.user.setActivity(`${prefix}help (NOW 24/7) (${version})`, { type: 'WATCHING' })
   .then(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
   .catch(console.error);
 });
