@@ -1,3 +1,5 @@
+// replace "process.env.token" with token if you are not planning to host on heroku
+
 const Discord = require("discord.js");
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
 const command_handler = require("./commands");
@@ -23,4 +25,4 @@ client.on('message', (message) => {
     command_handler.execute(name, message ,args ,client)
 });
 
-client.login(token);
+client.login(process.env.token);
