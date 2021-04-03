@@ -1,6 +1,6 @@
 {
   "name": "novusbotjs",
-  "version": "1.0.0",
+  "version": "2.0.0S_LTS",
   "description": "novus bot",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,8 @@
   "author": "Novus",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "discord.js": "^12.5.1",
+    "pm2": "^4.5.6",
+    "weather-js": "^2.0.0"
   }
 }
