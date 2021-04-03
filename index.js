@@ -1,4 +1,5 @@
-// DO NOT MODIFY OR THE BOT MIGHT BREAK //
+// replace "process.env.token" with token if you are not planning to host on heroku //
+// DO NOT MODIFY ANYTHING ELSE IN HERE OR THE BOT MIGHT BREAK //
 
 const Discord = require("discord.js");
 Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
@@ -29,4 +30,4 @@ client.on('message', (message) => {
     command_handler.execute(name, message ,args ,client)
 });
 
-client.login(token);
+client.login(process.env.token);
