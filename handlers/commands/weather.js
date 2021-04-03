@@ -26,7 +26,7 @@ module.exports = {
             .setColor('#778899')
 
             
-            newEmbed.addField("Latitude", location.lat, true)
+            .addField("Latitude", location.lat, true)
             .addField("Longitude", location.long, true)
             .addField("Feels Like", `${current.feelslike}° Degrees`, true)
             .addField("Degree Type", location.degreetype, true)
@@ -37,7 +37,8 @@ module.exports = {
             .addField("Observation Time", current.observationtime, true)
 
             .setFooter(`Powered by weather-js`)
+
+            message.channel.send(newEmbed)
         }
-        message.channel.send(newEmbed)
     }
 }
