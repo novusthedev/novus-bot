@@ -37,7 +37,7 @@ module.exports = {
             .addField("Observation Time", current.observationtime, true)
 
             .setFooter(`Powered by weather-js`)
-            message.channel.send(newEmbed);
         }
+        message.channel.send(newEmbed)
     }
 }
