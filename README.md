@@ -1,9 +1,10 @@
+# THIS BOT IS NO LONGER SUPPORTED
+This bot is now discontinued since i don't really care about it anymore. I might work on other things soon tough.
+
 # Novus's Bot
 source code for Novus's Bot on discord
 
-<p><a title="Invite" href="https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847" target="_blank" rel="noopener">Invite</a></p>
-<p><a title="Invite (Unstable Version)" href="https://discord.com/api/oauth2/authorize?client_id=811696283756134411&amp;permissions=8&amp;scope=bot" target="_blank" rel="noopener">Invite (Unstable Version)</a></p>
-<p><a title="Download" href="https://github.com/novusthedev/novus-bot/releases" target="_blank" rel="noopener">Download the source code</a></p>
+Sorry bud, you cannot invite this bot anymore!
 
 <h2><strong>What is this for?</strong></h2>
 <p>This bot was made in Bot designer for discord but the app is very limited and it requires an ad to bring it online. So i decided to redo the bot in discord.js. since im nice, im giving everyone the source code.<br /></p>
@@ -11,7 +12,7 @@ source code for Novus's Bot on discord
 <h2><strong>But why?<br /></strong></h2>
 <p>boredom. also look below for setup instructions</p>
 
-<h2>Preparing the bot</h2>
+<h2>Preparing the bot (incase anyone wants to mess with the bot)</h2>
 <h3>you'll need the following items:</h3>
 <ul>
 <li>discord.js 12.5.1</li>
