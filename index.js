@@ -1,33 +1,52 @@
-// replace "process.env.token" with token if you are not planning to host on heroku //
 // DO NOT MODIFY ANYTHING ELSE IN HERE OR THE BOT MIGHT BREAK //
 
-const Discord = require("discord.js");
-Discord.Constants.DefaultOptions.ws.properties.$browser = "Discord Android"
-const command_handler = require("./commands");
-const {
-    prefix,
-    token
-} = require('./conf/config.json');
+const { Client, Intents } = require('discord.js');
+const fs = require('node:fs');
+const path = require('node:path');
+const command_handler = require("./cmdhandler");
+const {token} = require('./conf/token.json');
 const {
     version
 } = require('./package.json');
 
-const client = new Discord.Client();
+const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const { Collection } = require('discord.js')
+
+client.commands = new Collection();
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
+for (const file of commandFiles) {
+	const filePath = path.join(commandsPath, file);
+	const command = require(filePath);
+	// Set a new item in the Collection
+	// With the key as the command name and the value as the exported module
+	client.commands.set(command.data.name, command);
+}
+
+
 
 client.once('ready', () => {
-    console.log('Novus Bot Status: Online');
+    console.log('Novus Bot has started!');
     console.log(`Version: ${version}`);
     command_handler.initCommands(client);
-    client.user.setActivity(`${prefix}help (${version})`, { type: 'WATCHING' })
-  .then(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
-  .catch(console.error);
+    client.user.setPresence({ activities: [{ name: `with commands | Version: ${version}` }], status: 'online' });
+  console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
 });
 
-client.on('message', (message) => {
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-    const args = message.content.slice(prefix.length).split(' ');
-    const name = args.shift().toLowerCase();
-    command_handler.execute(name, message ,args ,client)
-});
+client.login(token);
 
-client.login(process.env.token);
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isCommand()) return;
+
+	const command = client.commands.get(interaction.commandName);
+
+	if (!command) return;
+
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error(error);
+		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+	}
+});
