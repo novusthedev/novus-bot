@@ -24,14 +24,13 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
-
-
 client.once('ready', () => {
+	var clientId = client.user.id;
     console.log('Novus Bot has started!');
     console.log(`Version: ${version}`);
-    command_handler.initCommands(client);
-    client.user.setPresence({ activities: [{ name: `with commands | Version: ${version}` }], status: 'online' });
-  console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
+    client.user.setPresence({ activities: [{ type: "WATCHING", name: `on V${version}` }], status: 'online' });
+	console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
+	command_handler.initCommands(client);
 });
 
 client.login(token);

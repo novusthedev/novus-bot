@@ -25,7 +25,7 @@ module.exports = {
                         {name: 'Hitman status:', value: 'Hunted victim'},
                         {name: 'Victim hiding status', value: 'Found'},
                         {name: 'Victim status', value: 'Killed'},
-                        {name: 'Funeral status', value: 'You can generate a funeral for your victim by pressing Generate below.'}
+                        {name: 'Funeral status', value: 'You can generate a funeral by running /rip OR you can revive them by running /revive!'}
                         );
             
                     await interaction.reply({embeds: [newEmbed]})

@@ -7,7 +7,7 @@
 <p>Do you want to setup your own Novus Bot instance? Then follow this quick guide on how to set it all up!</p>
 <h3>you'll need the following items:</h3>
 <ul>
-<li>discord.js 13.8.0</li>
+<li>discord.js v13</li>
 <li>Any IDE with terminal or just a terminal</li>
 <li>The latest release of node.js (recommended 18.3.0)</li>
 <li>a bot created from Discord's Developer Portal</li>

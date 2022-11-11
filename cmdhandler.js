@@ -4,6 +4,7 @@ const path = require('node:path');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const {token} = require('./conf/token.json');
+const {clientId} = require('./index.js');
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
@@ -14,9 +15,6 @@ for (const file of commandFiles) {
 	const command = require(filePath);
 	commands.push(command.data.toJSON());
 }
-
-// bot id
-const clientId = '740292621817217104';
 
 const rest = new REST({ version: '9' }).setToken(token);
 

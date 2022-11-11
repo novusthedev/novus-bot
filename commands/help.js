@@ -18,7 +18,9 @@ module.exports = {
             {name: 'Fun Commands', value: 'Mess with funny commands'},
             {name: 'Kill victims (kill)', value: 'kill anyone (does not have to be a user!)'},
             {name: 'Grave (rip)', value: 'generates a grave'},
+            {name: 'Revive somebody (revive)', value: 'revives somebody'},
             {name: 'Bot Information', value: 'Debug info & Ways to support Novus Bot'},
+            {name: 'Bot Status (stats)', value: 'Generates current status directly from the bot.'},
             {name: "Novus Bot News", value: 'New upgrades with new security improvments after a year of no new releases!'},
             {name: 'GitHub Repository', value: 'View and fork the source code for Novus Bot and help improve the project by reporting bugs!'}
             );
