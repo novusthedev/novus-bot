@@ -1,7 +1,8 @@
 <h1>Welcome to the Novus Bot offical GitHub repo!</h1>
 <p>This bot is still in heavy testing, So do not expect much it to work as it its intended to be.</p>
 <p>&nbsp;</p>
-<p>Invite coming soon!</p>
+<p>Invite Here!!</p>
+<p>https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847<p>
 <p>&nbsp;</p>
 <h2>How to Set Up</h2>
 <p>Do you want to setup your own Novus Bot instance? Then follow this quick guide on how to set it all up!</p>
