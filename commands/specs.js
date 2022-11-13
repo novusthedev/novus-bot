@@ -31,12 +31,12 @@ module.exports = {
 					var free_mem_in_kb = free_memory/1024;
 					var free_mem_in_mb = free_mem_in_kb/1024;
 					var free_mem_in_gb = free_mem_in_mb/1024;
-					
+
 					var total_mem_in_kb = total_memory/1024;
 					var total_mem_in_mb = total_mem_in_kb/1024;
 					var total_mem_in_gb = total_mem_in_mb/1024; 
 
-                    const newEmbed = new Discord.EmbedBuilder()
+                    const newEmbed = new Discord.MessageEmbed()
 
                     .setColor('#ADC178')
                     .setTitle('Bot hosting specs')
@@ -50,7 +50,7 @@ module.exports = {
 			{name: 'CPU usage (15m):', value: `${osutils.loadavg(15)}%`, inline: true},
 			{name: 'Memory usage:', value: `${Math.round(free_memory)}MB/${Math.round(total_memory)}MB`},
                         );
-		
+
                     await interaction.reply({ephemeral: SafeMode, embeds: [newEmbed]})
                 },
             };

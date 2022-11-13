@@ -6,7 +6,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('tomb')
+	.setName('tomb')
 		.setDescription('Create a tombstone for anyone')
         	.addStringOption(option =>
            	 option.setName('line1')
@@ -31,7 +31,7 @@ module.exports = {
 	const name4 = interaction.options.getString('line4');
         var date = new Date()
         var year = date.getFullYear()
-        const tombmessage = new Discord.EmbedBuilder()
+        const tombmessage = new Discord.MessageEmbed()
 	    .setTitle('Generated Tombstone')
 	    .setImage(`http://www.tombstonebuilder.com/generate.php?top1=${name1}&top2=${name2}&top3=${name3}&top4=${name4}&sp=`.replaceAll(" ", "+"));
         

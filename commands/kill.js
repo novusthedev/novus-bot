@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const rip = require('./tomb');
-
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('kill')
@@ -16,7 +14,7 @@ module.exports = {
                     
                     const killed = interaction.options.getString('victim');
 
-                    const newEmbed = new Discord.EmbedBuilder()
+                    const newEmbed = new Discord.MessageEmbed()
                     .setColor('#3D0000')
                     .setTitle('Hitman')
                     .setDescription('Welcome to hitman!')

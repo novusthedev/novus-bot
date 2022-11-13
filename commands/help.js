@@ -2,9 +2,7 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const { ActionRowBuilder, ButtonBuilder } = require('discord.js');
-
-const {clientId} = require('../conf/clientId.json');
+const { MessageActionRow, MessageButton } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -12,10 +10,10 @@ module.exports = {
 		.setDescription('List of all commands'),
 	async execute(interaction) {
         
-        const newEmbed = new Discord.EmbedBuilder()
+        const newEmbed = new Discord.MessageEmbed()
         .setColor('#304281')
-        .setTitle('<:novus_bot:1041436866458701864> Novus Bot Help')
-        .setDescription('All commands you can currently use as of now. Only supports slash `/` commands!')
+        .setTitle('Help')
+        .setDescription('All commands')
         .addFields(
             {name: 'Fun Commands', value: 'Mess with funny commands'},
 	    {name: 'Make me say anything! ```/echo``` ```<message>```', value: 'Makes me say anything.'},
@@ -28,25 +26,15 @@ module.exports = {
             {name: "Novus Bot News", value: 'Upgraded the discord.js libraries to v14! With latest features & better performance.'},
             {name: 'GitHub Repository', value: 'View and fork the source code for Novus Bot and help improve the project by reporting bugs!'}
             );
-        
- const invite = new ActionRowBuilder()
-			.addComponents(
-				new ButtonBuilder()
-					.setLabel('Invite us to your server!')
-					.setStyle('Link')
-					.setEmoji('1041436866458701864')
-                    .setURL(`https://discordapp.com/oauth2/authorize?client_id=${clientId}&scope=bot&permissions=2146958847`),
-			);
 
- const github = new ActionRowBuilder()
+ const github = new MessageActionRow()
 			.addComponents(
-				new ButtonBuilder()
+				new MessageButton()
 					.setLabel('View source on GitHub!')
-					.setStyle('Link')
-					.setEmoji('1041437586331271208')
+					.setStyle('LINK')
                     .setURL('https://github.com/novusthedev/novus-bot'),
 			);
 
-        await interaction.reply({ ephemeral: true, components: [invite, github], embeds: [newEmbed]});
+        await interaction.reply({ ephemeral: true, components: [github], embeds: [newEmbed]});
 	},
 };

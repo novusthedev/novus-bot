@@ -14,7 +14,7 @@ module.exports = {
                     
                     const killed = interaction.options.getString('victim');
 
-                    const newEmbed = new Discord.EmbedBuilder()
+                    const newEmbed = new Discord.MessageEmbed()
                     .setColor('#B8E0D4')
                     .setTitle('Heaven')
                     .setDescription('Welcome to heaven!')

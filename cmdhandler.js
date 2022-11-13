@@ -4,7 +4,7 @@ const path = require('node:path');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const {token} = require('./conf/token.json');
-const {clientId} = require('./conf/clientId.json');
+var clientId = `713483504356425750`;
 
 const commands = [];
 const commandsPath = path.join(__dirname, 'commands');
@@ -20,18 +20,16 @@ const rest = new REST({ version: '9' }).setToken(token);
 
 (async () => {
 	try {
-		console.log('Refreshing slash (/) commands.');
+		console.log('Started refreshing application (/) commands.');
 
 		await rest.put(
             Routes.applicationCommands(clientId),
             { body: commands },
         );        
 
-		console.log('Reloaded slash (/) commands.');
+		console.log('Successfully reloaded application (/) commands.');
 	} catch (error) {
-		console.error("An error occurred.");
 		console.error(error);
-		console.error("Please check the clientId.json file inside the conf folder and see if you're using the correct ID for your bot.");
 	}
 })();
 
@@ -55,9 +53,7 @@ module.exports = {
     
     async execute(name, interaction, args, client) {
         const command = client.commands.get(name) || client.commands.find(c => c.allases && c.allases.Includes(name));
-        
-
-	if(!command) return;
+        if(!command) return;
         try {
             command.run(interaction, args, client);
         }
