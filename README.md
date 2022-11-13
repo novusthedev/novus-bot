@@ -18,7 +18,7 @@
 <li>open the terminal</li>
 <li>go to the bot's directory</li>
 <li>
-<blockquote>now install the following packages by running: <code>npm i discord.js @discordjs/rest discord-api-types plist os-utils</code></blockquote>
+<blockquote>now install the following packages by running: <code>npm i discord.js discord-api-types plist os-utils</code></blockquote>
 </li>
 <li>click "Make sure theres no errors occuring while installation."</li>
 <li>go to the discord developer portal and select a bot</li>
