@@ -1,8 +1,8 @@
-<h1>Welcome to the Novus Bot offical GitHub repo!</h1>
+<h1>Welcome to the Novus Bot Classic offical GitHub repo!</h1>
 <p>This bot is still in heavy testing, So do not expect much it to work as it its intended to be.</p>
 <p>&nbsp;</p>
 <p>Invite Here!</p>
-<p>https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847<p>
+<p>Novus Bot classic coming soon!<p>
 <p>&nbsp;</p>
 <h2>How to Set Up</h2>
 <p>Do you want to setup your own Novus Bot instance? Then follow this quick guide on how to set it all up!</p>
@@ -18,7 +18,7 @@
 <li>open the terminal</li>
 <li>go to the bot's directory</li>
 <li>
-<blockquote>now install the following packages by running: <code>npm i discord.js@v13 discord-api-types plist os-utils</code></blockquote>
+<blockquote>now install the following packages by running: <code>npm i discord.js@v13 discord-api-types @discordjs/builders @discordjs/rest plist os-utils</code></blockquote>
 </li>
 <li>click "Make sure theres no errors occuring while installation."</li>
 <li>go to the discord developer portal and select a bot</li>
