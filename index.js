@@ -26,7 +26,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	var clientId = client.user.id;
-    console.log('Novus Bot has started!');
+    console.log('The bot has been started!');
     console.log(`Version: ${version}`);
     client.user.setPresence({ activities: [{ type: "WATCHING", name: `on V${version}` }], status: 'online' });
 	console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))

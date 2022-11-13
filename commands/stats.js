@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 
+
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -16,20 +17,22 @@ module.exports = {
 					let minutes = Math.floor(totalSeconds / 60);
 					let seconds = Math.floor(totalSeconds % 60);
 
+
                     const {
     version
 } = require('../package.json');
 
                     const newEmbed = new Discord.MessageEmbed()
+
                     .setColor('#ADC178')
                     .setTitle('Novus Bot status')
                     .setDescription('Bot status from the Novus Bot HQ.')
                     .addFields(
                         {name: 'Client Ping:', value: `${Date.now() - interaction.createdTimestamp}ms`},
-						{name: 'Bot Uptime:', value: `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`},
-                        {name: 'Bot Version:', value: `${version}`},
+			{name: 'Bot Uptime:', value: `${days}d, ${hours}h, ${minutes}m, ${seconds}s`},
+			{name: 'Bot Version:', value: `${version}`},
                         );
-
+		
                     await interaction.reply({ephemeral: true, embeds: [newEmbed]})
                 },
             };
