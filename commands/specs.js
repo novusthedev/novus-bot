@@ -5,6 +5,8 @@ var osutils = require('os-utils');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
+const {SafeMode} = require('../conf/config.json');
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('specs')
@@ -34,7 +36,7 @@ module.exports = {
 					var total_mem_in_mb = total_mem_in_kb/1024;
 					var total_mem_in_gb = total_mem_in_mb/1024; 
 
-                    const newEmbed = new Discord.MessageEmbed()
+                    const newEmbed = new Discord.EmbedBuilder()
 
                     .setColor('#ADC178')
                     .setTitle('Bot hosting specs')
@@ -49,6 +51,6 @@ module.exports = {
 			{name: 'Memory usage:', value: `${Math.round(free_memory)}MB/${Math.round(total_memory)}MB`},
                         );
 		
-                    await interaction.reply({ephemeral: true, embeds: [newEmbed]})
+                    await interaction.reply({ephemeral: SafeMode, embeds: [newEmbed]})
                 },
             };

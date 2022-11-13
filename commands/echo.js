@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
+const {SafeMode} = require('../conf/config.json');
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('echo')
@@ -14,6 +16,6 @@ module.exports = {
                     
                     const newmsg = interaction.options.getString('message');
             
-                    await interaction.reply({content: `${newmsg}`})
+                    await interaction.reply({ephemeral: SafeMode, content: `${newmsg}`})
                 },
             };

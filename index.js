@@ -1,6 +1,6 @@
 // DO NOT MODIFY ANYTHING ELSE IN HERE OR THE BOT MIGHT BREAK //
 
-const { Client, Intents } = require('discord.js');
+const { Client, GatewayIntentBits, Partials } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const command_handler = require("./cmdhandler");
@@ -8,8 +8,9 @@ const {token} = require('./conf/token.json');
 const {
     version
 } = require('./package.json');
+const {SafeMode} = require('./conf/config.json');
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
 const { Collection } = require('discord.js')
 
 client.commands = new Collection();
@@ -25,10 +26,11 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-	var clientId = client.user.id;
+    var clientId = client.user.id;
+    console.log(`Safe mode enabled? ${SafeMode}`);
     console.log('The bot has been started!');
     console.log(`Version: ${version}`);
-    client.user.setPresence({ activities: [{ type: "WATCHING", name: `on V${version}` }], status: 'online' });
+    client.user.setPresence({ activities: [{ name: `on V${version} (NOW ON DISCORD.JS V14!)` }], status: 'online' });
 	console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
 	command_handler.initCommands(client);
 });

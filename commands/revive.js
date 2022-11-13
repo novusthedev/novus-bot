@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const rip = require('./rip');
-
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('revive')
@@ -16,7 +14,7 @@ module.exports = {
                     
                     const killed = interaction.options.getString('victim');
 
-                    const newEmbed = new Discord.MessageEmbed()
+                    const newEmbed = new Discord.EmbedBuilder()
                     .setColor('#B8E0D4')
                     .setTitle('Heaven')
                     .setDescription('Welcome to heaven!')

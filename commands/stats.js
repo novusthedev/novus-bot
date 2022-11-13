@@ -3,6 +3,8 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
+const {SafeMode} = require('../conf/config.json');
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('stats')
@@ -22,17 +24,18 @@ module.exports = {
     version
 } = require('../package.json');
 
-                    const newEmbed = new Discord.MessageEmbed()
+                    const newEmbed = new Discord.EmbedBuilder()
 
                     .setColor('#ADC178')
-                    .setTitle('Novus Bot status')
+                    .setTitle('<:novus_bot:1041436866458701864> Novus Bot status')
                     .setDescription('Bot status from the Novus Bot HQ.')
                     .addFields(
+			{name: 'Bot Version:', value: `${version}`},
+			{name: 'Safe mode enabled:', value: `${SafeMode}`},
                         {name: 'Client Ping:', value: `${Date.now() - interaction.createdTimestamp}ms`},
 			{name: 'Bot Uptime:', value: `${days}d, ${hours}h, ${minutes}m, ${seconds}s`},
-			{name: 'Bot Version:', value: `${version}`},
                         );
 		
-                    await interaction.reply({ephemeral: true, embeds: [newEmbed]})
+                    await interaction.reply({ephemeral: SafeMode, embeds: [newEmbed]})
                 },
             };
