@@ -2,7 +2,7 @@
 <p>This bot is still in heavy testing, So do not expect much it to work as it its intended to be.</p>
 <p>&nbsp;</p>
 <p>Invite Here!</p>
-<p>Novus Bot classic coming soon!<p>
+<p>https://discordapp.com/oauth2/authorize?client_id=713483504356425750&scope=bot&permissions=2146958847<p>
 <p>&nbsp;</p>
 <h2>How to Set Up</h2>
 <p>Do you want to setup your own Novus Bot instance? Then follow this quick guide on how to set it all up!</p>
