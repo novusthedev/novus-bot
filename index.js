@@ -30,8 +30,7 @@ client.once('ready', () => {
     console.log(`Safe mode enabled? ${SafeMode}`);
     console.log('The bot has been started!');
     console.log(`Version: ${version}`);
-    client.user.setPresence({ activities: [{ name: `on V${version} (NOW ON DISCORD.JS V14!)` }], status: 'online' });
-	console.log(presence => console.log(`Bot presence: ${presence.activities[0].name}. Hold CTRL + C to shut down the bot.`))
+	console.log(`Hold CTRL + C to shut down the bot.`))
 	command_handler.initCommands(client);
 });
 
