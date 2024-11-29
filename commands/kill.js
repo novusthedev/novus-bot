@@ -2,19 +2,20 @@ const Discord = require('discord.js');
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-const rip = require('./tomb');
-
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('kill')
 		.setDescription('Secretly kill someone you hate so much')
+        .setIntegrationTypes(1)
+        .setContexts(0,1,2)
         .addStringOption(option =>
             option.setName('victim')
                 .setDescription('Your kill target')
-                .setRequired(true)),	
+                .setRequired(true)),
                 async execute(interaction,victim) {
                     
-                    const killed = interaction.options.getString('victim');
+                    try {
+                    var killed = interaction.options.getString('victim');
 
                     const newEmbed = new Discord.EmbedBuilder()
                     .setColor('#3D0000')
@@ -29,5 +30,11 @@ module.exports = {
                         );
             
                     await interaction.reply({embeds: [newEmbed]})
+                    }
+                    catch (err) {
+                        console.warn(err)
+                        await interaction.reply({ephemeral: true, content: "There was an error during the command!"})
+                    };
+                    
                 },
             };

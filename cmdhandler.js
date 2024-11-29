@@ -20,14 +20,15 @@ const rest = new REST({ version: '9' }).setToken(token);
 
 (async () => {
 	try {
-		console.log('Refreshing slash (/) commands.');
+		console.log('Loading commands & syncing to Discord.');
 
 		await rest.put(
             Routes.applicationCommands(clientId),
             { body: commands },
         );        
 
-		console.log('Reloaded slash (/) commands.');
+		console.log('Commands loaded & synced!');
+        console.log('Now listening to users.');
 	} catch (error) {
 		console.error("An error occurred.");
 		console.error(error);
@@ -62,7 +63,7 @@ module.exports = {
             command.run(interaction, args, client);
         }
         catch(err) {
-            console.error(err);
+            console.warn(err);
         }
     }
 }

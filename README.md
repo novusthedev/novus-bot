@@ -1,16 +1,15 @@
-<h1>Welcome to the Novus Bot offical GitHub repo!</h1>
-<p>This bot is still in heavy testing, So do not expect much it to work as it its intended to be.</p>
+<h1>Welcome to the Climatic offical GitHub repo!</h1>
 <p>&nbsp;</p>
 <p>Invite Here!</p>
 <p>https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847<p>
 <p>&nbsp;</p>
 <h2>How to Set Up</h2>
-<p>Do you want to setup your own Novus Bot instance? Then follow this quick guide on how to set it all up!</p>
+<p>Do you want to setup your own Climatic instance? Then follow this quick guide on how to set it all up!</p>
 <h3>you'll need the following items:</h3>
 <ul>
 <li>discord.js v14</li>
 <li>Any IDE with terminal or just a terminal</li>
-<li>The latest release of node.js (recommended 19.0.1)</li>
+<li>The latest release of node.js (recommended v22)</li>
 <li>a bot created from Discord's Developer Portal</li>
 </ul>
 <h3>Setting up the bot before starting it up</h3>
@@ -40,9 +39,9 @@
 <li>type in node index</li>
 <li>wait a second</li>
 </ol>
-<p>If you see Novus Bot Status: Online then you are ready to go!</p>
-<p>If you see an error and the bot shutting down, please check the token in conf/token.json. if you put the token in and you still receive an error. please check all the packages or report it to our staff.</p>
+<p>If the commands sync, setup is finished!</p>
+<p>If you see an error and the bot shutting down, please check the token in conf/token.json. if you put the token in and you still receive an error. please check all the packages.</p>
 <p>&nbsp;</p>
-<p><strong>Keep the terminal open where Novus Bot is running from. to safely shut down the bot, press CTRL + C inside the terminal.</strong></p>
+<p><strong>Keep the terminal open where Climatic is running from. to safely shut down the bot, type `exit`.</strong></p>
 <p>&nbsp;</p>
-<p>And that's all for the Novus Bot setup! Hope this helps!</p>
+<p>And that's all for the Climatic setup! Hope this helps!</p>
