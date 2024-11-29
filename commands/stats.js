@@ -30,7 +30,7 @@ module.exports = {
 			const newEmbed = new Discord.EmbedBuilder()
 
 				.setColor('#ADC178')
-				.setTitle('<:novus_bot:1041436866458701864> Climatic status')
+				.setTitle('<:climatic:1311842271360057415> Climatic status')
 				.setDescription('Bot status from the Climatic HQ.')
 				.addFields(
 					{ name: 'Bot Version:', value: `${version}` },
