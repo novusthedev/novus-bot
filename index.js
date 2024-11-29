@@ -32,12 +32,38 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
+function UpdateCID() {
+	try {
+
+		const oID = require(`./conf/clientId.json`)
+		
+		if (client.user.id != oID.clientId) {
+			let cID = {
+				"clientId": client.user.id
+			}
+		
+			let newCID = JSON.stringify(cID);
+			fs.writeFileSync(`./conf/clientId.json`, newCID);
+			//console.clear();
+			console.log("User ID in the config was mismatched & we've updated it for you. Please restart.")
+			process.exit();
+		} else {
+			command_handler.StartSystem();
+			command_handler.initCommands(client);
+			CommandLine();
+		};
+	}
+	catch (err) {
+		console.warn("Could not update User ID.")
+		process.exit(1);
+	};
+}
+
 client.once('ready', () => {
+	UpdateCID();
 	console.log(`Version: ${version}`);
     console.log(`Safe mode enabled? ${SafeMode}`);
     client.user.setPresence({ activities: [{type: ActivityType.Custom, name: `Run /help for commands.` }], status: 'online' });
-	command_handler.initCommands(client);
-	CommandLine()
 });
 
 client.login(token);

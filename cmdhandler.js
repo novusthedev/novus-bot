@@ -18,25 +18,25 @@ for (const file of commandFiles) {
 
 const rest = new REST({ version: '9' }).setToken(token);
 
-(async () => {
-	try {
-		console.log('Loading commands & syncing to Discord.');
-
-		await rest.put(
-            Routes.applicationCommands(clientId),
-            { body: commands },
-        );        
-
-		console.log('Commands loaded & synced!');
-        console.log('Now listening to users.');
-	} catch (error) {
-		console.error("An error occurred.");
-		console.error(error);
-		console.error("Please check the clientId.json file inside the conf folder and see if you're using the correct ID for your bot.");
-	}
-})();
-
 module.exports = {
+    async StartSystem() {
+        try {
+            console.log('Loading commands & syncing to Discord.');
+    
+            await rest.put(
+                Routes.applicationCommands(clientId),
+                { body: commands },
+            );        
+    
+            console.log('Commands loaded & synced!');
+            console.log('Now listening to users.');
+        } catch (error) {
+            console.error("An error occurred.");
+            console.error(error);
+            console.error("Please check the clientId.json file inside the conf folder and see if you're using the correct ID for your bot.");
+        }
+    },
+
     async initCommands(client) {
         client.commands = new Discord.Collection();
 
