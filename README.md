@@ -1,7 +1,7 @@
 <h1>Welcome to the Climatic offical GitHub repo!</h1>
 <p>&nbsp;</p>
 <p>Invite Here!</p>
-<p>https://discordapp.com/oauth2/authorize?client_id=800804397415530576&scope=bot&permissions=2146958847<p>
+<p>https://discordapp.com/oauth2/authorize?client_id=800804397415530576<p>
 <p>&nbsp;</p>
 <h2>How to Set Up</h2>
 <p>Do you want to setup your own Climatic instance? Then follow this quick guide on how to set it all up!</p>
