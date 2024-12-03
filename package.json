@@ -1,6 +1,6 @@
 {
   "name": "climatic-dsc",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "source code for the Climatic bot on discord",
   "main": "index.js",
   "directories": {
