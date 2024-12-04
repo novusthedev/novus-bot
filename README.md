@@ -17,7 +17,7 @@
 <li>open the terminal</li>
 <li>go to the bot's directory</li>
 <li>now install the following packages by running: <code>npm i discord.js@v14 discord-api-types plist os-utils morjs @napi-rs/canvas</code><li>
-<li>PRE-RELEASE NOTE: You'll need the Gotham font family installed on your system in order for the <code>robloxban<code> generator command to work.<li>
+<li>PRE-RELEASE NOTE: You'll need the Gotham font family installed on your system in order for the Roblox ban generator command to work.<li>
 <li>click "Make sure theres no errors occuring while installation."</li>
 <li>go to the discord developer portal and select a bot</li>
 <li>go to the bots section and click "Copy Token"</li>
